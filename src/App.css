@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Noto+Sans+Limbu&family=Noto+Serif+Khojki&family=Playfair+Display:ital@1&family=Poppins:wght@100;400&family=Roboto:ital,wght@0,700;0,900;1,500&display=swap');
+/* font-family: 'PT Serif', serif; */
+
+
+.App {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'PT Serif', serif;
+}
+
+.heading {
+    text-transform: uppercase;
+    font-size: 40px;
+    margin: 30px;
+    z-index: 1;
+    text-align: center;
+    /* background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
+    color: transparent; */
+}
+
+@media (max-width : 800px) {
+    .heading {
+        margin: 15px 0;
+        font-size: 35px;
+    }
+}
