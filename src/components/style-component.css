@@ -14,7 +14,7 @@
 }
 
 .input__box:focus {
-    outline: 2px solid tomato;
+    outline: 2px solid rgb(202, 75, 53);
     border:none;
 }  
 
@@ -27,11 +27,11 @@
     right: 0px;
     border:none;
     font-size: 20px;
-    background-color: tomato;
+    background-color: rgb(255, 94, 66);
     color: white;
 }
 
 .input__submit:hover{
     /* transform: scale(0.9); */
-    background-color:rgb(255, 67, 34)
+    background-color: rgb(202, 75, 53);
 }

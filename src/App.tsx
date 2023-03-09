@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './App.css'
-import InputFeild from './components/input-component/inputFeild';
+import InputFeild from './components/inputFeild';
+import { Todo } from './components/model';
+import TodoList from './components/TodoList';
 
 
 // ===========================================================================
@@ -93,15 +95,54 @@ const App : React.FC = () => {
 // <string> : type of "todo". try hover and then you will see!
 // utiliser union (|number) va marcher aussi
   const [todo, setTodo] = useState<string>("");
-  console.log(todo);
+
+// ===========================================================================
+// How i create an array of a type of an interface.
+//this state will contain all of my todo items. so todo"s"
+// this type going to be an Array. import Todo interface , and <Todo> is going to be an Array so <Todo[]>
+const [todos, setTodos] = useState<Todo[]>([]);
+
+// function 
+// when we submit the form (InputFeild), it should add this inside of our handle add. so, now i take this function and pass this to our input field : <InputFeild />.
+// Once it is added in InputFeild, i go to InputFeild and i'll add this function(handleAdd) in props.
+const handleAdd = (e:React.FormEvent) => {
+  // To fix refreshing each time when i click on button, i added e (event) and preventDefault. but "e" need type => i add e : React.FormEvent.
+  // Once it's added, it should be setted in props (in InputFeild.)
+  e.preventDefault();
+  // if there is somthing inside of the todos?
+  if(todo){
+  // it should set our state. 
+  // then weare only supposed to set todos.
+  // ...todos : add 
+  // id: ~~ we are gonna add an another todo. it is props id in InputFeild. so we are gonna generate 10 random id for that.
+  // apres il faut typer id et todos.
+    setTodos([...todos, { id : Date.now(), todo:todo, isDone:false }]);
+
+  // vider inputFeild quand je submit.
+  setTodo("");
+
+  }
+};
+
+
+  console.log(todos);
 
   return (
     <div className="App">
       <span className="heading">Taskify</span>
       {/* property should existe in <InputFeild /> */}
-      <InputFeild todo={todo} setTodo={setTodo} />    
+      <InputFeild todo={todo} setTodo={setTodo} handleAdd={handleAdd} /> 
+
+      { /* affichage todo items */}
+      {/* {todos.map((t) => (
+        <li>{t.todo}</li>
+      ))}   */}
+      <TodoList
+      todos={todos} 
+      setTodos = {setTodos} 
+      /> 
     </div>
   );
 };
 
-export default App
+export default App;

@@ -9,6 +9,7 @@
     flex-direction: column;
     align-items: center;
     font-family: 'PT Serif', serif;
+    background-color:rgb(254, 254, 233)
 }
 
 .heading {
@@ -19,7 +20,17 @@
     text-align: center;
     /* background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
     color: transparent; */
+    color:rgb(1, 77, 1);
 }
+
+.todos {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+
 
 @media (max-width : 800px) {
     .heading {
