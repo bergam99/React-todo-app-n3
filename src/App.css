@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora&family=Noto+Sans+Limbu&family=Noto+Serif+Khojki&family=Playfair+Display:ital@1&family=Poppins:wght@100;400&family=Roboto:ital,wght@0,700;0,900;1,500&display=swap');
-/* font-family: 'PT Serif', serif; */
-
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Noto+Sans+Limbu&family=Noto+Serif+Khojki&family=PT+Serif:wght@400;700&family=Playfair+Display:ital@1&family=Poppins:wght@100;400&family=Roboto:ital,wght@0,700;0,900;1,500&display=swap');/* font-family: 'Playfair Display', serif; */
+/* font-family: 'Noto Serif Khojki', serif; */
 
 .App {
     width: 100vw;
@@ -8,10 +7,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'PT Serif', serif;
-    background-color:rgb(254, 254, 233)
+    font-family: 'Noto Serif Khojki', serif;
+    background-color: #F3F1E5;
 }
-
 .heading {
     text-transform: uppercase;
     font-size: 40px;
@@ -20,7 +18,7 @@
     text-align: center;
     /* background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
     color: transparent; */
-    color:rgb(1, 77, 1);
+    color:#0E4734;
 }
 
 .todos {
