@@ -138,7 +138,7 @@ const App: React.FC = () => {
     // if there is no destination, we're juste gonna return it.
     if (!destination) {
       return;
-    }
+    };
     // and also, if we take a todo item and drop it in the same position, so the destination is same, then also we're gonna do noting.
 
     if (
@@ -146,13 +146,14 @@ const App: React.FC = () => {
       destination.index === source.index
     ) {
       return;
-    }
+    };
     // declare 2 variables
     // 2. active : it will have all of the todos in the todoStates.
     let add;
     let active = todos;
     let complete = completedTodos;
     // we are gonna check if it came from TodoList drooppableId.
+    // source logic
     if (source.droppableId === "TodosList") {
       // ajout
       add = active[source.index];
@@ -164,6 +165,7 @@ const App: React.FC = () => {
       complete.splice(source.index, 1);
     }
 
+    // destination 
     // checking for the destination
     if (destination.droppableId === "TodosList") {
       active.splice(destination.index, 0, add);
@@ -188,7 +190,7 @@ const App: React.FC = () => {
         <TodoList
           todos={todos}
           setTodos={setTodos}
-          completedTodos={completedTodos}
+          CompletedTodos={completedTodos}
           setCompletedTodos={setCompletedTodos}
         />
       </div>
