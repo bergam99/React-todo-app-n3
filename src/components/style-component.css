@@ -16,7 +16,7 @@
 }
 
 .input__box:focus {
-    outline: 1px solid #0E4734;
+    outline: none;
     /* border:none; */
 }
 

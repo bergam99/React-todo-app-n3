@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
-import InputFeild from "./components/inputFeild";
 import { Todo } from "./components/model";
 import TodoList from "./components/TodoList";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
+import InputFeild from "./components/InputFeild";
 
 // ===========================================================================
 // let name : string;
